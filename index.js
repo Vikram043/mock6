@@ -11,6 +11,10 @@ app.use(cors())
 app.use('/',userRoute)
 app.use('/',quizRoute)
 
+app.get('/',async(req,res)=>{
+    res.send("WELCOME")
+})
+
 const port=process.env.PORT || 3001
 
 app.listen(port,async()=>{
